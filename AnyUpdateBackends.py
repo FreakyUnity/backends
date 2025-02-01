@@ -4,9 +4,9 @@ from flask import Flask, jsonify, request
 
 class GameInfo():
     def __init__(self):
-        self.TitleId : str = ""
-        self.SecretKey : str = ""
-        self.ApiKey : str = ""
+        self.TitleId : str = "580A5"
+        self.SecretKey : str = "58SXABMZE5Y5R3M7S911R3Y7QE93KWTEA1Z6K1JGTYKYT7AWN"
+        self.ApiKey : str = "https://580A5.playfabapi.com"
 
     def GetAuthHeaders(self) -> dict:
         return {
@@ -23,9 +23,9 @@ app : Flask = Flask(__name__)
 playfabCache : dict = {}
 muteCache : dict = {}
 
-settings.TitleId = ""
-settings.SecretKey = ""
-settings.ApiKey = ""
+settings.TitleId = "580A5"
+settings.SecretKey = "58SXABMZE5Y5R3M7S911R3Y7QE93KWTEA1Z6K1JGTYKYT7AWN"
+settings.ApiKey = "https://580A5.playfabapi.com"
 
 def ReturnFunctionJson(data, funcname, funcparam = {}):
     rjson = data["FunctionParameter"]
